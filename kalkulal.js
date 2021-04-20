@@ -1,23 +1,20 @@
 function szamol() {
-    var letszam = document.getElementById('letszam');
-    var ejszaka = document.getElementById('ejszaka');
-    var orszag = document.getElementById('orszag');
+    var letszam = parseInt(document.getElementById('letszam').value);
+    var ejszaka = parseInt(document.getElementById('ejszaka').value);
+    var orszag = document.getElementById('orszag').value;
     var fizetendo;
 
     //--számolás--
-    if(orszag = 'b'){
-        ejszaka = 5600;
+    if (orszag=='g'){
+        ar = 6200;
     }
-    else if(orszag = 'g'){
-        ejszaka = 6200;
+    if (orszag=='h'){
+        ar = 5000;
     }
-    else if(orszag = 'h'){
-        ejszaka = 5000;
+    if (orszag=='t'){
+        ar = 5800;
     }
-    else if(orszag = 't'){
-        ejszaka = 5800;
-    }
-      fizetendo = (letszam*ejszaka);
+      fizetendo = (letszam*ejszaka*ar);
     //------------
     document.getElementById('eredmeny').value = fizetendo+" Ft";
     
